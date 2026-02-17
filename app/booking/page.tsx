@@ -1,11 +1,5 @@
-import Navbar from "@/components/Navbar";
-import BookingComponent from "@/components/BookingComponent";
+import { redirect } from "next/navigation";
 
 export default function BookingPage() {
-  return (
-    <main className="bg-white">
-      <Navbar />
-      <BookingComponent />
-    </main>
-  );
+  redirect("/ar/booking");
 }

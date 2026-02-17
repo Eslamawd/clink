@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import BookingComponent from "@/components/BookingComponent";
+import BookingComponent from "@/components/Booking";
 
 export default function BookingPage() {
   return (

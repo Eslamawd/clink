@@ -1,23 +1,6 @@
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import TreatmentsSection from "@/components/TreatmentsSection";
-import SmileGallery from "@/components/SmileGallery";
-import ProductsSection from "@/components/ProductsSection";
-import TestimonialsCarousel from "@/components/TestimonialsCarousel";
-import FAQSection from "@/components/FAQSection";
-import ContactSection from "@/components/ContactSection";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="bg-white">
-      <Navbar />
-      <HeroSection />
-      <TreatmentsSection />
-      <SmileGallery />
-      <ProductsSection />
-      <TestimonialsCarousel />
-      <FAQSection />
-      <ContactSection />
-    </main>
-  );
+  redirect("/ar");
 }
+
