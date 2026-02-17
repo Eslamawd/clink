@@ -28,10 +28,10 @@ export function middleware(request: NextRequest) {
   const finalLocale = locales.includes(locale) ? locale : defaultLocale;
 
   // Redirect to localized path
-  const redirectUrl = new URL(
-    getLocalizedRedirect(pathname, finalLocale),
-    request.url,
-  );
+  const redirectPath = getLocalizedRedirect(pathname, finalLocale);
+  if (!redirectPath) return NextResponse.next();
+  
+  const redirectUrl = new URL(redirectPath, request.url);
   return NextResponse.redirect(redirectUrl);
 }
 
